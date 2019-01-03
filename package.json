@@ -3,10 +3,19 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "3.8.0"
+    "version": "3.7.1"
+  },
+  "yuqueConfig": {
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "u46795",
+    "repo": "leetcode",
+    "mdNameFormat": "title",
+    "postPath": "source/_posts/yuque"
   },
   "scripts": {
-    "deploy": "hexo g -d"
+    "sync": "yuque-hexo sync",
+    "clean:yuque": "yuque-hexo clean",
+    "deploy": "hexo clean && hexo g -d"
   },
   "dependencies": {
     "hexo": "^3.3.7",
@@ -24,5 +33,8 @@
     "hexo-renderer-marked": "^0.2.9",
     "hexo-server": "^0.1.3",
     "hexo-util": "^0.6.3"
+  },
+  "devDependencies": {
+    "yuque-hexo": "^1.3.0"
   }
 }
