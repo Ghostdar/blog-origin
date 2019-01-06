@@ -8,14 +8,14 @@
   "yuqueConfig": {
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "u46795",
-    "repo": "leetcode",
+    "repo": "blog",
     "mdNameFormat": "title",
     "postPath": "source/_posts/yuque"
   },
   "scripts": {
     "sync": "yuque-hexo sync",
     "clean:yuque": "yuque-hexo clean",
-    "deploy": "hexo clean && hexo g -d",
+    "deploy": "npm run sync && hexo clean && hexo g -d",
     "dev": "hexo clean && hexo server"
   },
   "dependencies": {
